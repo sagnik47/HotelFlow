@@ -351,6 +351,10 @@ public class BookingView {
                     if (booking.isActive()) {
                         bookingManager.checkout(booking.getBookingId());
                         getTableView().refresh();
+                        // Refresh room combo so freed room is immediately available
+                        if (roomCombo != null) {
+                            roomCombo.setItems(roomManager.getAvailableRooms());
+                        }
                         dashboardView.refreshDashboard();
                     }
                 });

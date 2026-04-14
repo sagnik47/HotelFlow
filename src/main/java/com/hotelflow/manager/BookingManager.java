@@ -102,9 +102,12 @@ public class BookingManager {
             return false;
         }
 
-        // Free the room and deactivate the booking
+        // Free the room and mark the booking as checked out (record stays for history)
         roomManager.updateAvailability(booking.getRoomNumber(), true);
         booking.setActive(false);
+
+        // Remove customer from active registry — must re-register to book again
+        customerManager.removeCustomer(booking.getCustomerId());
         return true;
     }
 

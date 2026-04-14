@@ -52,6 +52,22 @@ public class CustomerManager {
     }
 
     /**
+     * Removes a customer from the registry by their ID.
+     * Called on checkout to prevent the customer from booking again until re-registered.
+     *
+     * @param customerId The customer ID to remove
+     * @return true if removed, false if not found
+     */
+    public boolean removeCustomer(String customerId) {
+        Customer customer = customerMap.remove(customerId);
+        if (customer != null) {
+            customerList.remove(customer);
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * Returns the observable list of all customers for UI binding.
      */
     public ObservableList<Customer> getCustomerList() {
