@@ -1,0 +1,729 @@
+/* ============================================================
+   HotelFlow — Premium Dark Purple Theme
+   Color Palette: #50207A (Deep Purple), #D6B9FC (Lavender), #838CE5 (Periwinkle)
+   Fonts: Bebas Neue (headings), Inter (body)
+   Inspired by Primeclass hotel management UI
+   ============================================================ */
+
+/* --- Root & Global Tokens --- */
+.root {
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+
+    /* Core Palette */
+    -hf-deep-purple: #50207A;
+    -hf-lavender: #D6B9FC;
+    -hf-periwinkle: #838CE5;
+
+    /* Backgrounds */
+    -hf-bg-base: #0B0712;
+    -hf-bg-surface: #120E1C;
+    -hf-bg-card: #1A1328;
+    -hf-bg-card-elevated: #211838;
+    -hf-bg-input: #150F22;
+
+    /* Borders */
+    -hf-border: rgba(131, 140, 229, 0.12);
+    -hf-border-focus: rgba(131, 140, 229, 0.4);
+    -hf-border-card: rgba(214, 185, 252, 0.1);
+
+    /* Text */
+    -hf-text-primary: #F0EAF6;
+    -hf-text-secondary: #A89BBC;
+    -hf-text-muted: #6B5C80;
+    -hf-text-accent: #D6B9FC;
+
+    /* Semantic — palette only */
+    -hf-success: #838CE5;
+    -hf-error: #D6B9FC;
+    -hf-warning: #D6B9FC;
+    -hf-info: #838CE5;
+}
+
+/* --- Sidebar Navigation (VBox) --- */
+.sidebar {
+    -fx-background-color: #0D0918;
+    -fx-border-color: rgba(131, 140, 229, 0.08);
+    -fx-border-width: 0 1 0 0;
+    -fx-padding: 0;
+}
+
+.sidebar-brand {
+    -fx-padding: 28 24 24 24;
+}
+
+.sidebar-logo {
+    -fx-font-family: "Bebas Neue";
+    -fx-font-size: 28px;
+    -fx-text-fill: #F0EAF6;
+    -fx-letter-spacing: 2;
+}
+
+.sidebar-logo-accent {
+    -fx-font-family: "Bebas Neue";
+    -fx-font-size: 28px;
+    -fx-text-fill: #838CE5;
+}
+
+.sidebar-divider {
+    -fx-background-color: rgba(131, 140, 229, 0.08);
+    -fx-pref-height: 1;
+    -fx-max-height: 1;
+}
+
+.sidebar-section-label {
+    -fx-text-fill: #6B5C80;
+    -fx-font-size: 10px;
+    -fx-font-weight: 700;
+    -fx-padding: 20 24 8 24;
+}
+
+/* Sidebar nav buttons */
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #A89BBC;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: 500;
+    -fx-padding: 12 24;
+    -fx-alignment: CENTER-LEFT;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+    -fx-max-width: 10000;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 3;
+}
+
+.nav-btn:hover {
+    -fx-background-color: rgba(80, 32, 122, 0.18);
+    -fx-text-fill: #D6B9FC;
+}
+
+.nav-btn-active {
+    -fx-background-color: rgba(80, 32, 122, 0.25);
+    -fx-text-fill: #D6B9FC;
+    -fx-font-weight: 600;
+    -fx-border-color: #838CE5;
+    -fx-border-width: 0 0 0 3;
+}
+
+/* --- Content Area --- */
+.content-area {
+    -fx-background-color: #0B0712;
+    -fx-padding: 0;
+}
+
+/* --- Page Layout --- */
+.page-root,
+.dashboard-root {
+    -fx-background-color: #0B0712;
+}
+
+/* Page header (Bebas Neue) */
+.page-title {
+    -fx-font-family: "Bebas Neue";
+    -fx-font-size: 36px;
+    -fx-text-fill: #F0EAF6;
+}
+
+.page-subtitle {
+    -fx-font-family: "Inter";
+    -fx-text-fill: #A89BBC;
+    -fx-font-size: 14px;
+    -fx-font-weight: 400;
+}
+
+/* --- Cards (Glassmorphism) --- */
+.form-card,
+.table-card {
+    -fx-background-color: rgba(26, 19, 40, 0.85);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(214, 185, 252, 0.08);
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(80, 32, 122, 0.2), 20, 0, 0, 6);
+}
+
+.card-title {
+    -fx-font-family: "Bebas Neue";
+    -fx-text-fill: #D6B9FC;
+    -fx-font-size: 20px;
+}
+
+/* --- Form Fields --- */
+.field-label {
+    -fx-font-family: "Inter";
+    -fx-text-fill: #A89BBC;
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+}
+
+.text-input {
+    -fx-background-color: #150F22;
+    -fx-text-fill: #F0EAF6;
+    -fx-prompt-text-fill: #6B5C80;
+    -fx-border-color: rgba(131, 140, 229, 0.15);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10 14;
+    -fx-font-family: "Inter";
+    -fx-font-size: 13px;
+    -fx-pref-height: 42px;
+}
+
+.text-input:focused {
+    -fx-border-color: #838CE5;
+    -fx-effect: dropshadow(gaussian, rgba(131, 140, 229, 0.2), 10, 0, 0, 0);
+}
+
+/* ComboBox */
+.combo-input {
+    -fx-background-color: #150F22;
+    -fx-border-color: rgba(131, 140, 229, 0.15);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 2 4;
+    -fx-pref-height: 42px;
+}
+
+.combo-input:focused {
+    -fx-border-color: #838CE5;
+    -fx-effect: dropshadow(gaussian, rgba(131, 140, 229, 0.2), 10, 0, 0, 0);
+}
+
+.combo-input .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #F0EAF6;
+    -fx-font-family: "Inter";
+    -fx-font-size: 13px;
+    -fx-padding: 6 10;
+}
+
+.combo-input .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 10;
+}
+
+.combo-input .arrow-button .arrow {
+    -fx-background-color: #838CE5;
+}
+
+.combo-box-popup>.list-view {
+    -fx-background-color: #1A1328;
+    -fx-border-color: rgba(131, 140, 229, 0.2);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(80, 32, 122, 0.4), 20, 0, 0, 8);
+}
+
+.combo-box-popup>.list-view>.virtual-flow>.clipped-container>.sheet>.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #F0EAF6;
+    -fx-font-family: "Inter";
+    -fx-padding: 10 14;
+}
+
+.combo-box-popup>.list-view>.virtual-flow>.clipped-container>.sheet>.list-cell:hover {
+    -fx-background-color: rgba(131, 140, 229, 0.12);
+}
+
+.combo-box-popup>.list-view>.virtual-flow>.clipped-container>.sheet>.list-cell:filled:selected {
+    -fx-background-color: rgba(80, 32, 122, 0.35);
+    -fx-text-fill: #D6B9FC;
+}
+
+/* DatePicker — Main control */
+.date-input {
+    -fx-background-color: #150F22;
+    -fx-text-fill: #F0EAF6;
+    -fx-prompt-text-fill: #6B5C80;
+    -fx-border-color: rgba(131, 140, 229, 0.15);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 2 4;
+    -fx-pref-height: 42px;
+}
+
+.date-input:focused {
+    -fx-border-color: #838CE5;
+}
+
+.date-input>.text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #F0EAF6;
+    -fx-prompt-text-fill: #6B5C80;
+    -fx-font-family: "Inter";
+    -fx-font-size: 13px;
+}
+
+.date-input .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.date-input .arrow-button .arrow {
+    -fx-background-color: #838CE5;
+}
+
+/* DatePicker — Popup container */
+.date-picker-popup {
+    -fx-background-color: #1A1328;
+    -fx-border-color: rgba(131, 140, 229, 0.25);
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(80, 32, 122, 0.5), 24, 0, 0, 8);
+}
+
+/* Month/Year header bar */
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #211838;
+    -fx-padding: 8 10;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: #D6B9FC;
+    -fx-font-family: "Inter";
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+}
+
+/* Navigation arrows */
+.date-picker-popup .month-year-pane .spinner .button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.date-picker-popup .month-year-pane .spinner .left-arrow,
+.date-picker-popup .month-year-pane .spinner .right-arrow {
+    -fx-background-color: #838CE5;
+}
+
+.date-picker-popup .month-year-pane .spinner .button:hover .left-arrow,
+.date-picker-popup .month-year-pane .spinner .button:hover .right-arrow {
+    -fx-background-color: #D6B9FC;
+}
+
+/* Day name headers (Sun, Mon, etc.) */
+.date-picker-popup .day-name-cell {
+    -fx-text-fill: #A89BBC;
+    -fx-font-family: "Inter";
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-background-color: transparent;
+    -fx-padding: 6 0;
+}
+
+/* Week number column */
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: #6B5C80;
+    -fx-font-family: "Inter";
+    -fx-font-size: 10px;
+    -fx-background-color: transparent;
+    -fx-padding: 6;
+}
+
+/* Individual day cells */
+.date-picker-popup .day-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #F0EAF6;
+    -fx-font-family: "Inter";
+    -fx-font-size: 12px;
+    -fx-padding: 6;
+    -fx-background-radius: 6;
+    -fx-alignment: CENTER;
+}
+
+/* Days from previous/next month (secondary text) */
+.date-picker-popup .day-cell.previous-month,
+.date-picker-popup .day-cell.next-month {
+    -fx-text-fill: #4A3D5E;
+}
+
+/* Hover state */
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: rgba(131, 140, 229, 0.2);
+}
+
+/* Selected day */
+.date-picker-popup .day-cell:focused,
+.date-picker-popup .selected {
+    -fx-background-color: #50207A;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+}
+
+/* Today indicator */
+.date-picker-popup .today {
+    -fx-border-color: #838CE5;
+    -fx-border-radius: 6;
+    -fx-border-width: 1.5;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    -fx-background-color: linear-gradient(to bottom right, #50207A, #6B2FA0);
+    -fx-text-fill: white;
+    -fx-font-family: "Inter";
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-padding: 11 28;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(80, 32, 122, 0.4), 12, 0, 0, 3);
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to bottom right, #6B2FA0, #8040C0);
+    -fx-effect: dropshadow(gaussian, rgba(80, 32, 122, 0.6), 16, 0, 0, 5);
+}
+
+.btn-primary:pressed {
+    -fx-background-color: linear-gradient(to bottom right, #3A1860, #50207A);
+    -fx-effect: dropshadow(gaussian, rgba(80, 32, 122, 0.2), 6, 0, 0, 1);
+}
+
+.btn-secondary {
+    -fx-background-color: rgba(131, 140, 229, 0.1);
+    -fx-text-fill: #838CE5;
+    -fx-font-family: "Inter";
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-padding: 7 18;
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(131, 140, 229, 0.2);
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: rgba(131, 140, 229, 0.2);
+    -fx-border-color: #838CE5;
+}
+
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-text-fill: #D6B9FC;
+    -fx-font-family: "Inter";
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-padding: 8 20;
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(214, 185, 252, 0.25);
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+
+.btn-outline:hover {
+    -fx-background-color: rgba(214, 185, 252, 0.08);
+    -fx-border-color: #D6B9FC;
+}
+
+.btn-danger {
+    -fx-background-color: rgba(214, 185, 252, 0.1);
+    -fx-text-fill: #D6B9FC;
+    -fx-font-family: "Inter";
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-padding: 7 18;
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(214, 185, 252, 0.2);
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: rgba(214, 185, 252, 0.2);
+    -fx-border-color: #D6B9FC;
+}
+
+/* --- Status Labels --- */
+.status-label {
+    -fx-font-family: "Inter";
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-padding: 4 0;
+}
+
+.status-success {
+    -fx-text-fill: #838CE5;
+}
+
+.status-error {
+    -fx-text-fill: #D6B9FC;
+}
+
+/* --- TableView --- */
+.data-table {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+
+.data-table .column-header-background {
+    -fx-background-color: rgba(21, 15, 34, 0.8);
+    -fx-border-color: transparent transparent rgba(131, 140, 229, 0.08) transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.data-table .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 12 16;
+}
+
+.data-table .column-header .label {
+    -fx-font-family: "Inter";
+    -fx-text-fill: #6B5C80;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+}
+
+.data-table .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent rgba(131, 140, 229, 0.05) transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-table-cell-border-color: transparent;
+}
+
+.data-table .table-row-cell:hover {
+    -fx-background-color: rgba(80, 32, 122, 0.1);
+}
+
+.data-table .table-row-cell:selected {
+    -fx-background-color: rgba(80, 32, 122, 0.2);
+}
+
+.data-table .table-cell {
+    -fx-font-family: "Inter";
+    -fx-text-fill: #F0EAF6;
+    -fx-padding: 12 16;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER-LEFT;
+}
+
+.data-table .table-row-cell:selected .table-cell {
+    -fx-text-fill: #F0EAF6;
+}
+
+.data-table .placeholder>.label {
+    -fx-text-fill: #6B5C80;
+    -fx-font-family: "Inter";
+    -fx-font-size: 14px;
+}
+
+.data-table .filler {
+    -fx-background-color: rgba(21, 15, 34, 0.8);
+}
+
+.data-table .column-header-background .filler {
+    -fx-background-color: rgba(21, 15, 34, 0.8);
+}
+
+/* ScrollBar */
+.data-table .scroll-bar:vertical,
+.data-table .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.data-table .scroll-bar:vertical .track,
+.data-table .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+}
+
+.data-table .scroll-bar:vertical .thumb,
+.data-table .scroll-bar:horizontal .thumb {
+    -fx-background-color: rgba(131, 140, 229, 0.15);
+    -fx-background-radius: 4;
+}
+
+.data-table .scroll-bar:vertical .thumb:hover,
+.data-table .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: rgba(131, 140, 229, 0.3);
+}
+
+.data-table .scroll-bar .increment-button,
+.data-table .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.data-table .scroll-bar .increment-arrow,
+.data-table .scroll-bar .decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-shape: "";
+}
+
+/* --- Badges (Status indicators) — palette colors only --- */
+.badge-available, .badge-active {
+    -fx-background-color: rgba(131, 140, 229, 0.15);
+    -fx-text-fill: #838CE5;
+    -fx-padding: 5 14;
+    -fx-background-radius: 20;
+    -fx-font-family: "Inter";
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+}
+
+.badge-occupied, .badge-checkedout {
+    -fx-background-color: rgba(80, 32, 122, 0.2);
+    -fx-text-fill: #D6B9FC;
+    -fx-padding: 5 14;
+    -fx-background-radius: 20;
+    -fx-font-family: "Inter";
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+}
+
+/* --- Dashboard Stat Cards --- */
+.stat-card {
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.stat-card-purple {
+    -fx-background-color: linear-gradient(to bottom right, rgba(80, 32, 122, 0.4), rgba(80, 32, 122, 0.15));
+    -fx-border-color: rgba(80, 32, 122, 0.35);
+    -fx-effect: dropshadow(gaussian, rgba(80, 32, 122, 0.2), 16, 0, 0, 4);
+}
+
+.stat-card-purple:hover {
+    -fx-effect: dropshadow(gaussian, rgba(80, 32, 122, 0.35), 22, 0, 0, 6);
+}
+
+.stat-card-lavender {
+    -fx-background-color: linear-gradient(to bottom right, rgba(214, 185, 252, 0.15), rgba(214, 185, 252, 0.05));
+    -fx-border-color: rgba(214, 185, 252, 0.2);
+    -fx-effect: dropshadow(gaussian, rgba(214, 185, 252, 0.1), 16, 0, 0, 4);
+}
+
+.stat-card-lavender:hover {
+    -fx-effect: dropshadow(gaussian, rgba(214, 185, 252, 0.2), 22, 0, 0, 6);
+}
+
+.stat-card-periwinkle {
+    -fx-background-color: linear-gradient(to bottom right, rgba(131, 140, 229, 0.2), rgba(131, 140, 229, 0.06));
+    -fx-border-color: rgba(131, 140, 229, 0.2);
+    -fx-effect: dropshadow(gaussian, rgba(131, 140, 229, 0.1), 16, 0, 0, 4);
+}
+
+.stat-card-periwinkle:hover {
+    -fx-effect: dropshadow(gaussian, rgba(131, 140, 229, 0.2), 22, 0, 0, 6);
+}
+
+.stat-card-green {
+    -fx-background-color: linear-gradient(to bottom right, rgba(111, 228, 160, 0.12), rgba(111, 228, 160, 0.03));
+    -fx-border-color: rgba(111, 228, 160, 0.15);
+    -fx-effect: dropshadow(gaussian, rgba(111, 228, 160, 0.08), 16, 0, 0, 4);
+}
+
+.stat-card-green:hover {
+    -fx-effect: dropshadow(gaussian, rgba(111, 228, 160, 0.15), 22, 0, 0, 6);
+}
+
+.stat-card-gold {
+    -fx-background-color: linear-gradient(to bottom right, rgba(240, 192, 96, 0.12), rgba(240, 192, 96, 0.03));
+    -fx-border-color: rgba(240, 192, 96, 0.15);
+    -fx-effect: dropshadow(gaussian, rgba(240, 192, 96, 0.08), 16, 0, 0, 4);
+}
+
+.stat-card-gold:hover {
+    -fx-effect: dropshadow(gaussian, rgba(240, 192, 96, 0.15), 22, 0, 0, 6);
+}
+
+.stat-icon {
+    -fx-font-size: 26px;
+}
+
+.stat-value {
+    -fx-font-family: "Bebas Neue";
+    -fx-text-fill: #F0EAF6;
+    -fx-font-size: 38px;
+}
+
+.stat-label {
+    -fx-font-family: "Inter";
+    -fx-text-fill: #A89BBC;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+}
+
+/* --- Welcome Banner --- */
+.welcome-banner {
+    -fx-background-color: linear-gradient(to right, rgba(80, 32, 122, 0.2), rgba(131, 140, 229, 0.1));
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(80, 32, 122, 0.2);
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+}
+
+.banner-title {
+    -fx-font-family: "Bebas Neue";
+    -fx-text-fill: #D6B9FC;
+    -fx-font-size: 22px;
+}
+
+.banner-text {
+    -fx-font-family: "Inter";
+    -fx-text-fill: #A89BBC;
+    -fx-font-size: 13px;
+    -fx-line-spacing: 4;
+}
+
+/* --- Tooltip --- */
+.tooltip {
+    -fx-background-color: #1A1328;
+    -fx-text-fill: #F0EAF6;
+    -fx-font-family: "Inter";
+    -fx-border-color: rgba(131, 140, 229, 0.15);
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 14;
+    -fx-font-size: 12px;
+}
+
+/* --- Global Scrollbar --- */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: rgba(131, 140, 229, 0.12);
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: rgba(131, 140, 229, 0.25);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-shape: "";
+}
+
+/* --- ScrollPane --- */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-pane>.viewport {
+    -fx-background-color: transparent;
+}
